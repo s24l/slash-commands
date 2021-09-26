@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const Schema = require('../models/snipingChannel');
+const Schema = require('../models/snipingchannel');
 const client = require('../index.js')
 
 client.on('messageUpdate', message => {
