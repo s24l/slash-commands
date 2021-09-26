@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed } = require('discord.js');
 const Schema = require('../models/snipingchannel');
 const client = require('../index.js')
 
