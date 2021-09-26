@@ -8,6 +8,7 @@ const {
 
 module.exports = {
   name: "rr",
+  cooldown: 1,
   run: async (Client, message, arg) => {
 
     const nopermEmbed = new Discord.MessageEmbed()

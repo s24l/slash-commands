@@ -4,6 +4,7 @@ const ms = require("ms");
 module.exports = {
     name: "slowmode",
     emoji:'🔨',
+    cooldown: 1,
     description: "Enable/Disable slow-mode in the channel you are in",
     run: async (client, message, args) => {
 

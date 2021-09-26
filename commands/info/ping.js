@@ -2,7 +2,8 @@ const { Message, Client } = require("discord.js");
 
 module.exports = {
     name: "ping",
-    emoji:'ℹ',
+    emoji: 'ℹ',
+    cooldown: 1,
     aliases: ['p'],
     /**
      *

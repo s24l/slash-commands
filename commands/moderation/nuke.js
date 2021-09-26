@@ -2,6 +2,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
     name : 'clone',
     emoji:'🔨',
+    cooldown: 1,
     description : 'A simple channel nuke command.',
 
      /**

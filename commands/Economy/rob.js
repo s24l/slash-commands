@@ -3,7 +3,7 @@ module.exports = {
     name: 'rob',
     emoji: '💸',
     description: 'rob\'s a user',
-    cooldown: 1,
+    cooldown: 300,
     /**
      * @param {client} client
      * @param {message} message

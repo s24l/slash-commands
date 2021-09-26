@@ -20,6 +20,7 @@
         "google-it": "^1.6.2",
         "moment": "^2.29.1",
         "mongoose": "^6.0.2",
+        "discord-canvas": "^1.4.1",
         "nekos.life": "^2.0.7",
         "node-fetch": "^2.6.1",
         "popcat-wrapper": "^1.4.6"

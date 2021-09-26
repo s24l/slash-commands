@@ -3,6 +3,7 @@ const { STATES } = require('mongoose');
 
 module.exports = {
     name: 'help',
+    cooldown: 1,
     emoji:'ℹ',
     /** 
      * @param {Client} client 

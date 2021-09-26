@@ -2,6 +2,7 @@ const fetch = require("node-fetch")
 const Discord = require("discord.js")
 module.exports = {
     name: "lyrics",
+    cooldown: 1,
     emoji:'ℹ',
     description: "sends the lyrics of the song in chat",
     run: async (client, message, args) => {

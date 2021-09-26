@@ -3,6 +3,7 @@ module.exports = {
     name: "bot-stats",
     emoji:'ℹ',
     aliases: ['b-s'],
+    cooldown: 1,
     /**
      *
      * @param {Client} client

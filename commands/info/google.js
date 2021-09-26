@@ -2,6 +2,7 @@ const googleIt = require("google-it")
 const { Client, Message, MessageEmbed } = require("discord.js")
 module.exports = {
     name: "google",
+    cooldown: 1,
     run: async (client, message, args) => {
         const args1 = message.content.slice(''.length).trim().split(/ +/);
         args1.shift().toLowerCase().split(' ')[0];

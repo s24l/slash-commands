@@ -9,6 +9,7 @@ module.exports = {
     permis: ['KICK_MEMBERS', 'BAN_MEMBERS'],
     botPerms: ['KICK_MEMBERS', 'BAN_MEMBERS'],
     dev: false,
+    cooldown: 1,
     /**
      *
      * @param {Client} client

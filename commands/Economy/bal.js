@@ -4,6 +4,7 @@ module.exports = {
     name: 'bal',
     emoji: '💸',
     description: 'shows user\'s balance',
+    cooldown: 1,
     /** 
      * @param {Client} client 
      * @param {Message} message 

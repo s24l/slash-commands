@@ -4,6 +4,7 @@ module.exports = {
   aliases: [],
   categories: "Utility",
   permissions: " ",
+  cooldown: 1,
   description: "Display your / mentioned user's spotify status",
   usage: "",
   /**
