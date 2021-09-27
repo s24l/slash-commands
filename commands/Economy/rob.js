@@ -12,8 +12,6 @@ module.exports = {
     run: async (client, message, args) => {
         const stolen = message.mentions.users.first();
 
-        if(stolen === bot) return message.reply('why you tryna rob me try it again imma whoop ur lil ass')
-
         const bal = await client.bal(stolen.id);
 
         const bal2 = await client.bal(message.author.id);
