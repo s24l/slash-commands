@@ -1,4 +1,4 @@
-const {Message, MessageEmbed, MessageActionRow, MessageButton} = require('discord.js')
+/*const {Message, MessageEmbed, MessageActionRow, MessageButton} = require('discord.js')
 const Client = require('../../index')
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
      * @param {Message} message
      * @param {String[]} args
      * @param {MessageEmbed} embed
-     */
+     
     run: async (client, message, args) => {
         const member = message.mentions.members.first()
         if (!member) return message.reply('Please mention a valid user to moderate')
@@ -51,4 +51,4 @@ module.exports = {
             }
         })
     }
-}
+}*/
