@@ -3,7 +3,7 @@ const Schema = require('../models/snipingchannel');
 const client = require('../index.js')
 
 client.on('messageUpdate', async(oldMessage, newMessage) => {
-    Schema.findOne({ Guild }, async(e,data) => {
+    Schema.findOne({ Guild : newMessage.guild.id }, async(e,data) => {
         if (!data) return;
         if (!message.partial) {
             const channel = member.guild.channels.cache.get(data.Channel);
