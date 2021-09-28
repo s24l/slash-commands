@@ -20,9 +20,9 @@ module.exports = {
             message.channel.delete();
 
             const NukeEmbed = new MessageEmbed()
-            .setColor("Color you want")
-            .setDescription(`Emoji you want **${message.author.tag}** Nuked this channel.`)
-            .setImage("gif or imagene ")
+            .setColor("RED")
+            .setDescription(`<@${message.author.tag}> Nuked this channel.`)
+            .setImage("https://tenor.com/view/nuclear-explosion-nuke-bomb-boom-gif-16286228")
                   
     
             ch.send(NukeEmbed)

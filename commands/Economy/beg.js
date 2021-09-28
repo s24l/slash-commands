@@ -17,7 +17,8 @@ module.exports = {
         const coins = Math.floor(Math.random() * 600) + 1;
 
         const embed = new MessageEmbed()
-            .addField(`${givers[giversIndex]}`, `${coins}`, true)
+            .addField(`its your lucky day `, `${givers[giversIndex]}`, true)
+            .addField(`decided to give you`, `${coins}`, true)
             message.reply({ embeds: [embed] });
         client.add(message.author.id, coins);
     },
