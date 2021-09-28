@@ -33,7 +33,7 @@ module.exports = {
             client.add(message.author.id, winAmount)
             client.rmv(stolen.id, winAmount)
         } else {
-            const coins = Math.floor(Math.random() * 3500) + 1;
+            const coins = Math.floor(Math.random() * bal2) - 2500;
             message.reply(`you tried to rob <@${stolen.id}> but got caught so you paid him ${coins}`)
             client.rmv(message.author.id, coins)
             client.add(stolen.id, coins)

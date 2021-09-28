@@ -2,8 +2,8 @@ const { MessageEmbed } = require('discord.js');
 const Schema = require('../models/snipingchannel');
 const client = require('../index.js')
 
-client.on('messageUpdate', message => {
-    Schema.findOne, async (e, data) => {
+client.on('messageUpdate', async (member, message) => {
+    Schema.findOne({ Guild: member.guild.id }, async (e, data) => {
         if (!data) return;
         if (!message.partial) {
             const channel = member.guild.channels.cache.get(data.Channel);
@@ -20,4 +20,5 @@ client.on('messageUpdate', message => {
             }
         }
     }
+    )
 })
