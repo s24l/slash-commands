@@ -2,15 +2,16 @@ const { MessageEmbed } = require('discord.js');
 const Schema = require('../models/snipingchannel');
 const client = require('../index.js')
 
-client.on('messageUpdate', async (member, oldMessage, newMessage, message) => {
-    Schema.findOne({ Guild: member.guild.id }, async (e, data) => {
+client.on('messageUpdate', async(member, message, oldMessage, newMessage) => {
+    Schema.findOne({ Guild: member.guild.id }, async(e,data) => {
         if (!data) return;
-        if (!message) {
+        if (!message.partial) {
             const channel = member.guild.channels.cache.get(data.Channel);
+            const editedInChannel = client.channels.cache.get(message.channel.id)
             if (channel) {
                 const embed29 = new MessageEmbed()
                     .setTitle(`**AUDIT LOGS**`)
-                    .setDescription(`Message edited in <#${message.channel.id}> [Jump to Message](${oldMessage.url})`)
+                    .setDescription(`Message edited in <#${message.channel.id}> [Jump to Message](${message.url})`)
                     .addField(`before`, `${oldMessage}`)
                     .addField(`after`, `${newMessage}`)
                     .setColor(0x426ca6)
@@ -18,6 +19,5 @@ client.on('messageUpdate', async (member, oldMessage, newMessage, message) => {
                 channel.send({ embeds: [embed29] })
             }
         }
-    }
-    )
+    })
 })
