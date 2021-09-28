@@ -5,7 +5,7 @@ const client = require('../index.js')
 client.on('messageUpdate', async(oldMessage, newMessage) => {
     Schema.findOne({ Guild : newMessage.guild.id }, async(e,data) => {
         if (!data) return;
-        if (!message.partial) {
+        if (!newMessage) {
             const channel = member.guild.channels.cache.get(data.Channel);
             if (channel) {
                 const embed29 = new MessageEmbed()
