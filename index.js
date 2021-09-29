@@ -84,26 +84,6 @@ client.on("messageCreate", async message => {
     }
 });
 
-// auto delete hard bad words
-client.on('messageCreate', async (message) => {
-    let wordArray = message.content.split(' ')
-
-    const fs = require('fs');
-
-    let reply_data = fs.readFileSync('./file.txt').toString();
-
-    let replies = reply_data.split('\n');
-
-    for (var i = 0; i < replies.length; i++) {
-        if (wordArray.includes(replies[i])) {
-            message.delete()
-            message.channel.send(`YO <@${message.author.id}> relax your shit ok no hard bad words `)
-                .setTimeout(() => message.delete(), 5000);
-            break;
-        }
-    }
-})
-
 //reaction roles stuff
 client.on("interactionCreate", (interaction) => {
     if (interaction.isButton()) {

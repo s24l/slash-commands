@@ -47,7 +47,6 @@ module.exports = {
               {
                 id: interaction.guild.id,
                 allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-             // deny: ["SEND_MESSAGES"]
               },
             ],
           })
