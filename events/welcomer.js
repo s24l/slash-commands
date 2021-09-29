@@ -30,7 +30,6 @@ client.on('guildMemberAdd', async(member) => {
             );
 
             const channel = member.guild.channels.cache.get(data.Channel);
-            channel.send(`<@${user.id}>has went from being happy, to being in this server. Welcome!`)
-            channel.send({files:[attachment]})
+            channel.send({files:[attachment], content: `<@${user.id}> has went from being happy, to being in this server. Welcome!`})
     })
 })
