@@ -19,7 +19,7 @@ module.exports = {
      */
     run: async (client, interaction, args) => {
     if (!interaction.member.permissions.has("ADMINISTRATOR")) return interaction.followUp({ content: "You dont have `Administrator` permission"})
-    if (!interaction.guild.me.permissions.has("MANAGE_CHANNELS")) 
+    if (!interaction.guild.me.permissions.has("MANAGE_CHANNELS"))
       return interaction.followUp({
         content: "I dont have `Manage Channels` permission",
       });
@@ -47,6 +47,7 @@ module.exports = {
               {
                 id: interaction.guild.id,
                 allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
+             // deny: ["SEND_MESSAGES"]
               },
             ],
           })
