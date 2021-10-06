@@ -36,13 +36,6 @@ module.exports = {
         .setLabel("WEEB")
         .setCustomId(`69`)
         .setStyle('PRIMARY')
-        .setDisabled('false'),
-
-
-      new MessageButton()
-        .setLabel("SMP ROLE")
-        .setCustomId(`70`)
-        .setStyle('PRIMARY')
         .setDisabled('false')
 
     )
