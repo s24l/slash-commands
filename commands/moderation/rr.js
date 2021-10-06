@@ -26,19 +26,23 @@ module.exports = {
 
     const nv = new MessageActionRow().addComponents(
       new MessageButton()
-        .setLabel("announcment pings role")
+        .setLabel("ANNOUNCMENT PING ROLE")
         .setCustomId(`68`)
         .setStyle('PRIMARY')
         .setDisabled('false'),
 
 
       new MessageButton()
-        .setLabel("WEEB")
+        .setLabel("WEEB ROLE")
         .setCustomId(`69`)
         .setStyle('PRIMARY')
-        .setDisabled('false')
+        .setDisabled('false'),
 
-    )
+      new MessageButton()
+        .setLabel("SMP ROLE")
+        .setCustomId(`70`)
+        .setStyle('PRIMARY')
+        .setDisabled('false'))
 
 
     message.channel.send({ components: [nv], embeds: [embed] })

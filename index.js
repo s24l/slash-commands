@@ -116,6 +116,20 @@ client.on("interactionCreate", (interaction) => {
             }
             // replace roles id in above lines else it wont work
         }
+        if (interaction.customId === "70") {
+            // use the custom id u gave to the button
+
+            interaction.component.setStyle("DANGER");
+            const smp = ('894989694889234506')
+            if (interaction.member.roles.cache?.has(smp)) {
+                interaction.member.roles.remove(smp)
+                interaction.reply({ content: `I removed <@${smp}> from you.`, ephemeral: true })
+            } else {
+                interaction.member.roles.add(smp)
+                interaction.reply({ content: `I added <@${smp}> to you.`, ephemeral: true })
+            }
+            // replace roles id in above lines else it wont work
+        }
     }
 })
 client.login(client.config.token);
