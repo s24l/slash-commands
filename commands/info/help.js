@@ -14,7 +14,8 @@ module.exports = {
         const emojis = {
             info: 'ℹ',
             moderation: '🔨',
-            test: '🧪'
+            test: '🧪',
+            economy: '💵'
         }
         const directories = [...new Set(client.commands.map(cmd => cmd.directory)),
         ];

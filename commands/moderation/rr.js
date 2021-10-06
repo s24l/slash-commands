@@ -9,6 +9,8 @@ const {
 module.exports = {
   name: "rr",
   cooldown: 1,
+  emoji: '🔨',
+  description: 'reaction roles',
   run: async (Client, message, arg) => {
 
     const nopermEmbed = new Discord.MessageEmbed()
@@ -33,6 +35,13 @@ module.exports = {
       new MessageButton()
         .setLabel("WEEB")
         .setCustomId(`69`)
+        .setStyle('PRIMARY')
+        .setDisabled('false'),
+
+
+      new MessageButton()
+        .setLabel("SMP ROLE")
+        .setCustomId(`70`)
         .setStyle('PRIMARY')
         .setDisabled('false')
 

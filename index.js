@@ -116,6 +116,24 @@ client.on("interactionCreate", (interaction) => {
             }
             // replace roles id in above lines else it wont work
         }
+        if (interaction.isButton()) {
+
+            if (interaction.customId === "70") {
+    
+    
+                interaction.component.setStyle("DANGER");
+                if (interaction.member.roles.cache?.has('894989694889234506')) {
+                    interaction.member.roles.remove('894989694889234506')
+                    interaction.reply({ content: 'I removed <@894989694889234506> from you.', ephemeral: true })
+                } else {
+                    interaction.member.roles.add('894989694889234506')
+                    interaction.reply({ content: 'I added <@894989694889234506> to you.', ephemeral: true })
+                }
+    
+    
+                // replace roles id in above lines else it wont work
+            }
+        }
     }
 })
 client.login(client.config.token);
