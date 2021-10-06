@@ -13,10 +13,10 @@ module.exports = {
   description: 'reaction roles',
   run: async (Client, message, arg) => {
 
-    const nopermEmbed = new Discord.MessageEmbed()
+    /*const nopermEmbed = new Discord.MessageEmbed()
       .setColor(`RED`)
       .setTitle(`⛔ You don't have permission to use this!`)
-    if (!message.member.permissions.has("MANAGE_ROLES")) return message.channel.send({ embeds: [nopermEmbed] }).then(message => setTimeout(() => message.delete(), 5000));
+    if (!message.member.permissions.has("MANAGE_ROLES")) return message.channel.send({ embeds: [nopermEmbed] }).then(message => setTimeout(() => message.delete(), 5000));*/
 
     const embed = new Discord.MessageEmbed()
       .setTitle("Reaction Role")
