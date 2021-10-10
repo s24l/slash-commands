@@ -18,6 +18,12 @@ module.exports = {
       */
     run: async (client, interaction, args) => {
 
+        if (!interaction.member.permissions.has("ADMINISTRATOR")) return interaction.followUp({ content: "You dont have `Administrator` permission" })
+        if (!interaction.guild.me.permissions.has("MANAGE_CHANNELS"))
+            return interaction.followUp({
+                content: "I dont have `Manage Channels` permission",
+            });
+
         const query = args[0];
 
         if (!query) interaction.followUp(`type the amount u dumbfuck`)
