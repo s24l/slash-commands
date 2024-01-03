@@ -23,10 +23,10 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('Bot stats!')
         .setColor('#c2ffee')
-        .addField('Ping',`${client.ws.ping}ms`)
-        .addField('Uptime',`My Uptime is ${days}d ${hours}h ${minutes}m ${seconds}s`)
-        .addField('server-count',  `${client.guilds.cache.size} servers!`)
-        .addField('member-count',   `${client.users.cache.size} users!`)
+        .addFields({name: 'Ping', value: `${client.ws.ping}ms`},
+                   {name: 'Uptime', value: `My Uptime is ${days}d ${hours}h ${minutes}m ${seconds}s`},
+                   {name: 'server-count', value: `${client.guilds.cache.size} servers!`},
+                   {name: 'member-count', value:  `${client.users.cache.size} users!`})
         .setFooter(`Requested by ${message.author.tag}`,  message.author.displayAvatarURL({ dynamic: true }))
 
         message.channel.send({ embeds: [embed], components: [row] });
