@@ -26,9 +26,9 @@ module.exports = {
         .setAuthor('Spotify Track Info', 'https://cdn.discordapp.com/emojis/889955546810183731.png')
         .setColor("#2e3137")
         .setThumbnail(`https://i.scdn.co/image/${data.assets.largeImage.slice(8)}`)
-        .addField('➟ Song Name | ', `\`\`\`yaml\n${data.details} - ${data.state}\n\`\`\``, true)
-        .addField('➟ Album | ', `\`\`\`yaml\n${data.assets.largeText}\n\`\`\``, true)
-        .addField('➟ Author | ', `\`\`\`yaml\n${trackAuthor}\n\`\`\``, true)
+        .addFields({ name: '➟ Song Name | ', value: `\`\`\`yaml\n${data.details} - ${data.state}\n\`\`\``, inline: true},
+                   { name: '➟ Album | ', value: `\`\`\`yaml\n${data.assets.largeText}\n\`\`\``, inline: true},
+                   { name: '➟ Author | ', value: `\`\`\`yaml\n${trackAuthor}\n\`\`\``, inline: true})
         .setTimestamp()
         message.reply({ embeds: [embed] });
       }
